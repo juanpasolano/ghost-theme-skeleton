@@ -1,0 +1,29 @@
+{{!< default}}
+
+
+<div class="main_rocky" role="main">
+{{#foreach posts}}
+<article class="article_rocky" role="article" itemscope itemtype="http://schema.org/Article">
+	<header>
+		<time class="date" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+		<h1 class="posttitle" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
+	</header>
+	<div class="postcontent" itemprop="articleBody">
+		{{content}}
+	</div>
+	{{#if tags}}
+	<div class="posttags">
+		Tags: {{tags separator=" | "}}
+	</div>
+	{{/if}}
+</article>
+<hr>
+{{/foreach}}
+
+{{#if pagination}}
+<div class="pagination_rocky">
+	{{pagination}}
+</div>
+{{/if}}
+
+</div>
