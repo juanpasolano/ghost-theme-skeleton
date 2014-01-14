@@ -12,18 +12,20 @@
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{! Styles }}
-		<link rel="stylesheet" type="text/css" href="/assets/css/vendor/foundation.min.css" />
-		<link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
+
+		<link rel="stylesheet" type="text/css" href="{{asset "css/vendor/foundation.min.css"}}" />
+		<link rel="stylesheet" type="text/css" href="{{asset "css/styles.css"}}" />
 
 		{{ghost_head}}
 </head>
 <body class="{{body_class}}">
-	<div class="wrapper_moth">
+	<div class="wrapper_themename">
 
 	{{> header}}
 	{{{body}}}
 	{{> footer}}
 	</div>
 	{{ghost_foot}}
+	<script src="{{asset "js/scripts.js"}}"></script>
 </body>
 </html>
